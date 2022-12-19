@@ -1,0 +1,19 @@
+{% extends 'app/edit.html' %}
+
+{% block title %} Form {% endblock %}
+
+{% block content %}
+  <h2>Form for Order</h2>
+
+  <form method="post">
+    {% csrf_token %}
+    {{form.customer_name.label}}{{form.customer_name}}<br>
+    {{form.hall.label}}{{form.hall}}<br>
+    {{form.dishes.label}}{{form.dishes}}<br>
+    {{form.date.label}}{{form.date}}<br>
+    {{form.times_day.label}}{{form.times_day}}<br>
+    {{form.people_count.label}}{{form.people_count}}<br>
+    {{form.checkbox.label}}{{form.checkbox}}<br>
+    <button type="submit">Send</button>
+  </form>
+{% endblock %}

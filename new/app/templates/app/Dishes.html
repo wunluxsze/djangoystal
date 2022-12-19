@@ -1,0 +1,16 @@
+<{% extends 'app/edit.html' %}
+
+{% block title %} Dishes {% endblock %}
+
+{% block content %}
+  <h2>All Dishes</h2>
+
+  {% for i in Dishes %}
+    <span>Name: "{{i.name}}"   compound: "{{i.compound}}"</span>
+    <br>
+  {% endfor %}
+
+  <div>
+    <a href="{% url 'home' %}">Home</a>
+  </div>
+{% endblock %}

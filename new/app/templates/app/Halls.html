@@ -1,0 +1,22 @@
+<{% extends 'app/edit.html' %}
+{% block title %} Halls {% endblock %}
+{% load static %}
+
+{% block content %}
+  <h2>Все залы</h2>
+  <h2>1 зал</h2>
+  <img src="{% static 'img/1.jpeg' %}" alt="" class="img">
+  <h2>2 зал</h2>
+  <img src="{% static 'img/2.jpeg' %}" alt="" class="img">
+  <h2>3 зал</h2>
+  <img src="{% static 'img/3.jpg' %}" alt="" class="img" >
+<br>
+  {% for i in Halls %}
+    <span class="halls"> {{i.name}} , {{i.info}}</span>
+    <br>
+  {% endfor %}
+
+  <div>
+    <a href="{% url 'home' %}">Home</a>
+  </div>
+{% endblock %}
